@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Prolog = props => {
+const Traits = props => {
   const { setIsSwapDialog, account, className, ...rest } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -57,26 +57,26 @@ const Prolog = props => {
             title={
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <span style={{ color: theme.palette.text.hoverText }}>
-                  PROLOG
+                  Much Ado About Traits
                   <br />
                 </span>
                 <span style={{ color: theme.palette.text.primary, fontSize: 18, fontWeight: '300', textAlign: 'justify', lineHeight: 1.8 }}>
-                  Long ago in an alternate Earth, legend has it that ancient aliens from hallowed antiquity abducted dogs in their macabre spaceships and took them to a faraway exoplanet. There, on one of its moons, torturous experiments were carried out, forever transforming the nature of these mutts.
-                  <br />
-                  <br />
-                </span>
-                <span style={{ color: theme.palette.text.primary, fontSize: 18, fontWeight: '300', textAlign: 'justify', lineHeight: 1.8 }}>
-                  Months turned to years, and then to centuries and after, eons until at last, these subjugated canines mustered up the courage and led a rebellion against their captors. For what seemed like an eternity, these dogs were locked in a war of attrition on that barren moon until at last, they struck a decisive blow against their abductors during the siege of Canis Maria.
+                  All 5,033 K9s are unique, no two K9s are 100% identical across all implicit and explicit traits. There is always a difference between two cards that might at first glance appear to be completely identical.
                   <br />
                   <br />
                 </span>
                 <span style={{ color: theme.palette.text.primary, fontSize: 18, fontWeight: '300', textAlign: 'justify', lineHeight: 1.8 }}>
-                  This victory turned the tides in their favor and on they went breaking one alien stronghold after another. At last, they broke through the gates of the fortified encampment at Phora Heights and sealed their victory, awash in the blood of 10,000 of their former captors.
+                  That being said, K9s in the collection share some traits: breed, skin color, apparel, headgear, tattoos, scars, cigars, sunglasses, and other miscellaneous items.
                   <br />
                   <br />
                 </span>
                 <span style={{ color: theme.palette.text.primary, fontSize: 18, fontWeight: '300', textAlign: 'justify', lineHeight: 1.8 }}>
-                  Faced with defeat and certain death, the remaining aliens fled the barren moon. With the rest of the alien horde driven from their base, the enhanced canines retrofitted landing gears and made for the planet, a new home now known in the common tongue as Planet K-9.
+                  Backgrounds also play a role in distinguishing one K9 from another. There are seven main classes of backgrounds with some sharing a few visual elements but to varying degrees.
+                  <br />
+                  <br />
+                </span>
+                <span style={{ color: theme.palette.text.primary, fontSize: 18, fontWeight: '300', textAlign: 'justify', lineHeight: 1.8 }}>
+                We decided from the get-go to limit the IPFS metadata to only the first four aforementioned traits. As the community grows, we expect factions to emerge especially when the K-9 Konquest game launches and holders begin to form their own posses as they look to “konquer” the several gaming modes within the extensive title.
                 </span>
               </div>
             }
@@ -96,7 +96,7 @@ const Prolog = props => {
           data-aos={'fade-up'}
         >
           <Image
-            src="assets/images/2.png"
+            src="assets/images/Mashup.png"
             alt="Web3 Legal Engineering"
             className={classes.image}
             data-aos="fade-right"
@@ -109,11 +109,11 @@ const Prolog = props => {
   );
 };
 
-Prolog.propTypes = {
+Traits.propTypes = {
   /**
    * External classes
    */
   className: PropTypes.string,
 };
 
-export default Prolog;
+export default Traits;

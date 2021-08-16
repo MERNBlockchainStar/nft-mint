@@ -272,6 +272,7 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <ContainedButton
               loading={loadingStatus}
+              disable={true}
               style={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -287,7 +288,7 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
                 mint()
               }
             >
-              Mint Token
+              Coming soon
             </ContainedButton>
           </div>
         </div>

@@ -31,18 +31,21 @@ const TopAppBarMenu = () => {
         </ScrollTo>
         <ScrollTo>
           {({ scroll }) => (
-            <OutlinedButton onClick={() => scroll({ x: 0, y: 1570, smooth: true })} style={{ border: 'none' }}>
+            <OutlinedButton onClick={() => scroll({ x: 0, y: 1700, smooth: true })} style={{ border: 'none' }}>
               <Typography variant='body2' style={{ fontFamily: 'LULO' }}>K9NITE MINTING</Typography>
             </OutlinedButton>)
           }
         </ScrollTo>
         <ScrollTo>
           {({ scroll }) => (
-            <OutlinedButton onClick={() => scroll({ x: 0, y: 2670, smooth: true })} style={{ border: 'none' }}>
+            <OutlinedButton onClick={() => scroll({ x: 0, y: 4150, smooth: true })} style={{ border: 'none' }}>
               <Typography variant='body2' style={{ fontFamily: 'LULO' }}>ROADMAP</Typography>
             </OutlinedButton>)
           }
         </ScrollTo>
+        <OutlinedButton onClick={() => { window.open('https://planetk9nft.medium.com/', '_blank')}} style={{ border: 'none' }}>
+          <Typography variant='body2' style={{ fontFamily: 'LULO' }}>BLOG</Typography>
+        </OutlinedButton>
       </ListItem>
     </>
   );

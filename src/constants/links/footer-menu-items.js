@@ -1,8 +1,8 @@
 
 import MediumIcon from '../../components/Icons/MediumIcon'
-import TelegramIcon from '../../components/Icons/TelegramIcon'
+// import TelegramIcon from '../../components/Icons/TelegramIcon'
 import TwitterIcon from '../../components/Icons/TwitterIcon'
-import EmailIcon from '../../components/Icons/EmailIcon'
+// import EmailIcon from '../../components/Icons/EmailIcon'
 import OpenseaIcon from '../../components/Icons/OpenseaIcon'
 import DiscordIcon from '../../components/Icons/DiscordIcon'
 
@@ -10,22 +10,17 @@ const FOOTER_MENUS = [
     {
         id: 'twitter',
         icon: <TwitterIcon />,
-        url: 'https://twitter.com/k-9'
+        url: 'https://twitter.com/planetk9nft?s=21'
     },
     {
         id: 'discord',
         icon: <DiscordIcon />,
-        url: 'https://t.me/k-9'
+        url: 'https://discord.gg/gASbm4YqQG'
     },
     {
         id: 'medium',
         icon: <MediumIcon />,
-        url: 'https://k-9.medium.com/',
-    },
-    {
-        id: 'email',
-        icon: <EmailIcon />,
-        url: 'mailto:info@k-9',
+        url: 'https://planetk9nft.medium.com/',
     },
     {
         id: 'opensea',

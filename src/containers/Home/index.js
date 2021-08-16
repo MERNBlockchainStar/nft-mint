@@ -12,6 +12,8 @@ import SectionAlternate from 'hoc/SectionAlternate';
 import Customization from './Customization';
 import K9nite from './K9nite';
 import Roadmap from './Roadmap';
+import Conquest from './Conquest';
+import Traits from './Traits';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,6 +48,12 @@ const Home = () => {
       <Section>
         <K9nite />
       </Section>
+      <Section>
+        <Traits />
+      </Section>
+      <SectionAlternate>
+        <Conquest />
+      </SectionAlternate>
       <Section >
         <Roadmap />
       </Section>

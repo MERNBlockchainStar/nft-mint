@@ -11,14 +11,13 @@ const useStyles = makeStyles(theme => ({
     root: {},
     image: {
         boxShadow:
-            '25px 60px 125px -25px rgba(80,102,144,.1), 16px 40px 75px -40px rgba(0,0,0,.2)',
+          '25px 60px 125px -25px rgba(80,102,144,.1), 16px 40px 75px -40px rgba(0,0,0,.2)',
         borderRadius: theme.spacing(2),
         [theme.breakpoints.down('sm')]: {
-            maxWidth: 500,
+          maxWidth: 500,
+          marginBottom: 60
         },
-        width: theme.spacing(30),
-        height: theme.spacing(40)
-    }
+      },
 }));
 
 const K9nite = props => {
@@ -33,70 +32,28 @@ const K9nite = props => {
         <div id='K9nite' className={clsx(classes.root, className)} {...rest}>
             <Grid
                 container
-                justify="space-between"
+                justifyContent="space-between"
                 spacing={0}
                 direction={isMd ? 'row' : 'column-reverse'}
             >
                 <Grid
                     item
                     container
-                    justify="flex-start"
-                    alignItems="center"
+                    justifyContent="flex-start"
+                    //alignItems="center"
                     xs={12}
-                    md={3}
+                    md={6}
                     spacing={2}
-                    data-aos={'fade-up'}>
-                    <Image
-                        src="assets/images/dog1.jpg"
-                        alt="Web3 Legal Engineering"
-                        className={classes.image}
-                        data-aos="fade-left"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000"
-                    />
+                    data-aos={'fade-up'}
+                    style={{padding: theme.spacing(0,2)}}>
+                    <iframe id="vp1942ah" title="Video Player" width="720" height="720" frameBorder="0" src="https://s3.amazonaws.com/embed.animoto.com/play.html?w=swf/production/vp1&e=1629123765&f=942ahEotP863GpKyV2MUSQ&d=0&m=p&r=360x360+480x480+720x720&volume=0&start_res=720x720&i=m&asset_domain=s3-p.animoto.com&animoto_domain=animoto.com&options=autostart/loop" allowFullScreen></iframe>
                 </Grid>
                 <Grid
                     item
                     container
-                    justify="flex-start"
-                    alignItems="center"
+                    // alignItems="center"
                     xs={12}
-                    md={3}
-                    spacing={2}
-                    data-aos={'fade-up'}>
-                    <Image
-                        src="assets/images/dog2.jpg"
-                        alt="Web3 Legal Engineering"
-                        className={classes.image}
-                        data-aos="fade-left"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000"
-                    />
-                </Grid>
-                <Grid
-                    item
-                    container
-                    justify="flex-start"
-                    alignItems="center"
-                    xs={12}
-                    md={3}
-                    spacing={2}
-                    data-aos={'fade-up'}>
-                    <Image
-                        src="assets/images/dog3.jpg"
-                        alt="Web3 Legal Engineering"
-                        className={classes.image}
-                        data-aos="fade-left"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000"
-                    />
-                </Grid>
-                <Grid
-                    item
-                    container
-                    alignItems="center"
-                    xs={12}
-                    md={3}
+                    md={6}
                     data-aos={'fade-up'}>
                     <SectionHeader
                         title={
