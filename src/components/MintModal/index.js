@@ -1,5 +1,5 @@
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback ,useEffect} from 'react';
 import { UnsupportedChainIdError } from '@web3-react/core'
 import { UserRejectedRequestError as UserRejectedRequestErrorWalletConnect } from '@web3-react/walletconnect-connector'
 import { NoEthereumProviderError, UserRejectedRequestError as UserRejectedRequestErrorInjected } from '@web3-react/injected-connector'
@@ -16,6 +16,7 @@ import { MemoizedOutlinedTextField } from 'components/UI/OutlinedTextField';
 import Image from 'components/UI/Image';
 import { isEmpty, delay } from 'utils/utility';
 import { nftInstance } from 'services/nftInstance';
+import {ethers} from "ethers";
 
 const useStyles = makeStyles(theme => ({
   actionButton: {
@@ -105,6 +106,10 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
   const dialogClasses = dialogStyles();
   const { enqueueSnackbar } = useSnackbar();
 
+  useEffect(()=>{
+    window.ethereum.enable();
+  },[])
+
   const getErrorMessage = (error) => {
     if (error instanceof NoEthereumProviderError) {
       return `No browser extension detected, install MetaMask on desktop or visit from a dApp browser on mobile.`
@@ -149,6 +154,7 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
   }, []);
 
   const mint = async () => {
+    // handleTransaction()
     if(!!error || isEmpty(account))
     {
       enqueueSnackbar(`First, Please fix the error`, { variant: 'error' });
@@ -160,10 +166,9 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
       let tx = null
       const saleIsActive = await nft.saleIsActive()
       let overrides = {
-        value: `${0.00001*1e18*amount}`,
-        gasLimit: 620000
+        value: `${0.0001*1e18*amount}`,
       }
-
+     
       if(!saleIsActive)
       {
         const { hash: flipSaleStateHash } = await nft.flipSaleState()
@@ -204,9 +209,8 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
         return;
       }
     }
-    catch(error) {
-        console.log('kevin===>', error)
-        enqueueSnackbar(`Mint error ${error?.data?.message}`, { variant: 'error' });
+    catch {
+        enqueueSnackbar(`Mint failed`, { variant: 'error' });
         setLoadingStatus(false)
     }
   }
@@ -272,7 +276,7 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <ContainedButton
               loading={loadingStatus}
-              disable={true}
+              //disable={true}
               style={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -288,7 +292,7 @@ const MintModal = ({ open, onClose, headerTitle, activatingConnector, setActivat
                 mint()
               }
             >
-              Coming soon
+              Mint K-9 NFT
             </ContainedButton>
           </div>
         </div>

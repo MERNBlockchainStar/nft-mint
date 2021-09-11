@@ -30,7 +30,7 @@ export const bscConnector = new BscConnector({ supportedChainIds: [97
   // ,97
   ] })
 
-export const injected = new InjectedConnector({ supportedChainIds: [4
+export const injected = new InjectedConnector({ supportedChainIds: [1
   // , 1, 4
 ] })
 
